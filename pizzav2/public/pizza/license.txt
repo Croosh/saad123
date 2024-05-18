@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pizza Realistic
+* source:	https://sketchfab.com/3d-models/pizza-realistic-2443db3e29c64b03853685872c15ae00
+* author:	neshallads (https://sketchfab.com/neshallads)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pizza Realistic" (https://sketchfab.com/3d-models/pizza-realistic-2443db3e29c64b03853685872c15ae00) by neshallads (https://sketchfab.com/neshallads) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
