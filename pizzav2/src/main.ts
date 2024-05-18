@@ -27,19 +27,10 @@ light2.position.set(-10, 30, -10);
 light1.rotateZ(90);
 scene.add(light, light1, light2, amblight);
 
-loader.load(
-  "pizza/scene.gltf",
-  function (gltf) {
-    const model = gltf.scene;
-    scene.add(model);
-  },
-  function (xhr) {
-    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-  },
-  function (error) {
-    console.log(error);
-  }
-);
+loader.load("pizza/scene.gltf", function (gltf) {
+  const model = gltf.scene;
+  scene.add(model);
+});
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(containerWidth, containerHeight);
