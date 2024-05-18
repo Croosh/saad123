@@ -93,8 +93,30 @@ nav h1 {
   flex: 1;
   display: flex;
   justify-content: center;
+  text-align: center;
+  position: relative;
   align-items: center;
 }
+
+#model-container span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  animation: blink 1500ms ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .cta button {
   font-family: "Inter", sans-serif;
   place-self: start;
@@ -112,6 +134,7 @@ nav h1 {
 #model {
   width: 100%;
   height: 100%;
+  position: absolute;
 }
 
 @media screen and (max-width: 1000px) {

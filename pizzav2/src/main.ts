@@ -8,6 +8,7 @@ const loader = new GLTFLoader();
 const modelContainer = document.getElementById("model") as HTMLDivElement;
 const containerWidth = modelContainer.clientWidth;
 const containerHeight = modelContainer.clientHeight;
+const loadingSpan = document.getElementById("loading") as HTMLSpanElement;
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -27,10 +28,21 @@ light2.position.set(-10, 30, -10);
 light1.rotateZ(90);
 scene.add(light, light1, light2, amblight);
 
-loader.load("pizza/scene.gltf", function (gltf) {
-  const model = gltf.scene;
-  scene.add(model);
-});
+loader.load(
+  "pizza/scene.gltf",
+  function (gltf) {
+    const model = gltf.scene;
+    scene.add(model);
+  },
+  function () {
+    if (loadingSpan) {
+      loadingSpan.style.display = "none";
+    }
+  },
+  function (error) {
+    console.log(error);
+  }
+);
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(containerWidth, containerHeight);
@@ -63,7 +75,6 @@ animate();
 window.addEventListener("resize", () => {
   const containerWidth = modelContainer.clientWidth;
   const containerHeight = modelContainer.clientHeight;
-
   camera.aspect = containerWidth / containerHeight;
   camera.updateProjectionMatrix();
 
